@@ -1,0 +1,8 @@
+<?php $exp = 1771611031; $val = array (
+  'application' => 'quickSubmit',
+  'type' => 'plugins.importexport',
+  'release' => '1.0.6.0',
+  'date' => '2022-12-06',
+  'sitewide' => 0,
+  'lazy-load' => 0,
+);

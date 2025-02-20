@@ -39,29 +39,41 @@
         <div class="seccion-wrapper">
             <div class="swiper_title" style="">Romance</div>
         </div>
-        <!-- <pre>
-            {$categories|@print_r}
-        </pre> -->
-        
-        {* Verificar si hay categorías disponibles *}
-        {if $categories|@count}
-            <div class="categories">
-                <h2>{translate key="catalog.categories"}</h2>
-                <ul>
-                    {foreach from=$categories item=category}
-                        <li>
-                            <a href="{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()}">
-                                {$category->getLocalizedTitle()|escape}
-                            </a>
-                        </li>
-                    {/foreach}
-                </ul>
-            </div>
+        {* No published titles in this category *}
+        {if empty($publishedSubmissions)}
+            <h2>
+                {translate key="catalog.category.heading"}
+            </h2>
+            <p>{translate key="catalog.noTitles"}</p>
+    
         {else}
-            <p>{translate key="catalog.noCategories"}</p>
+    
+            {* New releases *}
+            {if !empty($newReleasesMonographs)}
+                {include file="frontend/components/monographList.tpl" monographs=$newReleasesMonographs titleKey="catalog.newReleases" authorUserGroups=$authorUserGroups}
+            {/if}
+    
+            {* All monographs *}
+            {include file="frontend/components/monographList.tpl" monographs=$publishedSubmissions featured=$featuredMonographIds titleKey="catalog.category.heading"}
+    
+            {* Pagination *}
+            {if $prevPage > 1}
+                {capture assign=prevUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|to_array:$prevPage}{/capture}
+            {elseif $prevPage === 1}
+                {capture assign=prevUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()}{/capture}
+            {/if}
+            {if $nextPage}
+                {capture assign=nextUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|to_array:$nextPage}{/capture}
+            {/if}
+            {include
+                file="frontend/components/pagination.tpl"
+                prevUrl=$prevUrl
+                nextUrl=$nextUrl
+                showingStart=$showingStart
+                showingEnd=$showingEnd
+                total=$total
+            }
         {/if}
-        
-        
 
 
         {* Pagination *}

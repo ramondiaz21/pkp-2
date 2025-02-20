@@ -1,0 +1,18 @@
+<?php $exp = 1771611023; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n != 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'plugins.block.browse' => 'Navegar',
+      'plugins.block.browse.displayName' => 'Bloque de exploración',
+      'plugins.block.browse.description' => 'Este plugin proporciona herramientas de exploración en la barra lateral.',
+      'plugins.block.browse.settings' => 'Ajustes',
+      'plugins.block.browse.settings.title' => 'Explorar posibilidades',
+      'plugins.block.browse.category' => 'Categorías',
+      'plugins.block.browse.series' => 'Series',
+      'plugins.block.browse.newReleases' => 'Novedades',
+    ),
+  ),
+);
