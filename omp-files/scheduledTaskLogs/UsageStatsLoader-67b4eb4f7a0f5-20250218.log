@@ -1,0 +1,5 @@
+[2025-02-18 14:19:27] http://localhost:8000
+[2025-02-18 14:19:27] [Notificación] Se ha iniciado la tarea.
+[2025-02-18 14:19:27] [Notificación] El archivo C:\xampp\htdocs\pkp-2\omp-files/usageStats/processing/usage_events_20250217.log se ha movido a la carpeta de envío.
+[2025-02-18 14:19:30] [Notificación] Se ha enviado el trabajo a segundo plano para procesar el archivo de registro {$file} y almacenar los datos estadísticos.
+[2025-02-18 14:19:30] [Notificación] Se ha detenido la tarea.

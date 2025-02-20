@@ -1,0 +1,19 @@
+<?php $exp = 1771608686; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n != 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'api.submissions.400.submissionIdsRequired' => 'Debe proporcionar uno o más identificadores de envío para añadirlos al catálogo.',
+      'api.submissions.400.submissionsNotFound' => 'No se han podido encontrar uno o más de los envíos que ha especificado.',
+      'api.submissions.400.wrongContext' => 'El envío que ha solicitado no está en esta editorial.',
+      'api.emails.403.disabled' => 'No se ha activado la funcionalidad de notificación por correo electrónico en esta editorial.',
+      'api.publications.403.contextsDidNotMatch' => 'La publicación que ha solicitado no forma parte de esta editorial.',
+      'api.publications.403.submissionsDidNotMatch' => 'La publicación que ha solicitado no forma parte de este envío.',
+      'api.submissions.403.cantChangeContext' => 'No puede cambiar la editorial de un envío.',
+      'api.submission.400.inactiveSection' => 'Esta sección ya no recibe más envíos.',
+      'api.emailTemplates.403.notAllowedChangeContext' => 'No tiene permiso para mover esta plantilla de correo electrónico a otra editorial.',
+    ),
+  ),
+);

@@ -1,0 +1,204 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+// Make all border colors transparent
+@bg-border-color: transparent;
+
+// Increase the font size and weight of section titles in the issue table of
+// contents
+.obj_issue_toc .galleys h2,
+.obj_issue_toc .section h2 {
+  font-size: @font-header;
+  font-weight: @bold;
+  color: @text;
+}
+
+.pkp_structure_head {
+  background-color: black;
+}
+
+/* Header */
+.pkp_structure_head {
+  background: linear-gradient(135deg, #0056b3, #002f6c);
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-button-wrapper {
+  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+}
+
+.pkp_nav_list a {
+	color: white;
+}
+
+.pkp_navigation_user_wrapper {
+  position: relative;
+}
+
+/* Logo */
+.logo-button-wrapper img {
+  width: 250px;
+  height: auto;
+}
+
+.pkp_search {
+	justify-content: space-between;
+}
+
+.logo-button-wrapper .is_img {
+  height: 100px;
+  width: 250px;
+  display: block;
+}
+
+/* Navegación */
+.pkp_site_nav_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Menú Principal */
+.pkp_navigation_primary {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.pkp_navigation_primary li {
+  position: relative;
+}
+
+.pkp_navigation_primary a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.pkp_navigation_primary a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Formulario de Búsqueda */
+.pkp_search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.pkp_search input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.pkp_search button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Botones de Usuario */
+.pkp_navigation_user {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.pkp_navigation_user a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.pkp_navigation_user a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pkp_navigation_primary_row, .pkp_navigation_primary_wrapper {
+	width: 100%;
+}
+
+.cover-only {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0!important;
+}
+
+.large-cover {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.obj_monograph_summary .cover img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.obj_monograph_summary .cover {
+  width: 100%;
+}
+
+.cmp_monographs_list .obj_monograph_summary {
+  width: 100%;
+}
+
+.swiper-slide {
+  margin: 0!important;
+  flex-shrink:1!important;
+}
+
+.large-cover {
+  width: 100%; /* Asegura que se usa el tamaño correcto */
+  height: auto;
+  image-rendering: crisp-edges; /* Para navegadores modernos */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Evita deformaciones */
+}
+
+.cmp_monographs_list {
+  margin: 0;
+}
+
+.pkp_page_catalog .pkp_structure_content {
+  display: none;
+}
+

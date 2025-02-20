@@ -1,0 +1,12 @@
+<?php $exp = 1771608686; $val = array (
+  'domain' => NULL,
+  'plural-forms' => 'nplurals=2; plural=n != 1;',
+  'messages' => 
+  array (
+    '' => 
+    array (
+      'author.submit.notAccepting' => 'Esta editorial no acepta envíos en este momento.',
+      'author.submit' => 'Nuevo envío',
+    ),
+  ),
+);
