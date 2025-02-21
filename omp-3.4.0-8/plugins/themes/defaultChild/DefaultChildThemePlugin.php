@@ -27,6 +27,8 @@ class DefaultChildThemePlugin extends ThemePlugin {
 		$this->modifyStyle('stylesheet', ['addLess' => ['styles/global.less']]);
 		$this->modifyStyle('stylesheet', ['addLess' => ['styles/remove-borders.less']]);
 		$this->modifyStyle('stylesheet', ['addLess' => ['styles/catalog.less']]);
+		$this->modifyStyle('stylesheet', ['addLess' => ['styles/login.less']]);
+		$this->modifyStyle('stylesheet', ['addLess' => ['styles/register.less']]);
 	}
 
 	/**

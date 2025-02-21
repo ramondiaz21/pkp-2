@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2025-02-20 12:09:59
+/* Smarty version 4.3.1, created on 2025-02-20 18:11:03
   from 'app:frontendcomponentsheader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_67b76ff79cc5b0_61554380',
+  'unifunc' => 'content_67b7c497064fa6_82608104',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'app:frontend/components/headerHead.tpl' => 1,
   ),
 ),false)) {
-function content_67b76ff79cc5b0_61554380 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67b7c497064fa6_82608104 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\pkp-2\\omp-3.4.0-8\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
  <?php $_smarty_tpl->_assignInScope('showingLogo', true);?> <?php if (!$_smarty_tpl->tpl_vars['displayPageHeaderLogo']->value) {?> <?php $_smarty_tpl->_assignInScope('showingLogo', false);?> <?php }?> 

@@ -39,42 +39,27 @@
         <div class="seccion-wrapper">
             <div class="swiper_title" style="">Romance</div>
         </div>
+
+        {* Breadcrumb *}
+        {include file="frontend/components/breadcrumbs_catalog.tpl" currentTitleKey="catalog.newReleases"}
+        <h1>{translate key="catalog.newReleases"}</h1>
+    
+        {* Count of new releases being dispalyed *}
+        <div class="monograph_count">
+            {translate key="catalog.browseTitles" numTitles=$publishedSubmissions|@count}
+        </div>
+    
         {* No published titles in this category *}
         {if empty($publishedSubmissions)}
-            <h2>
-                {translate key="catalog.category.heading"}
-            </h2>
-            <p>{translate key="catalog.noTitles"}</p>
+            <p>{translate key="catalog.noTitlesNew"}</p>
     
         {else}
+            {include file="frontend/components/monographList.tpl" monographs=$publishedSubmissions authorUserGroups=$authorUserGroups}
     
-            {* New releases *}
-            {if !empty($newReleasesMonographs)}
-                {include file="frontend/components/monographList.tpl" monographs=$newReleasesMonographs titleKey="catalog.newReleases" authorUserGroups=$authorUserGroups}
-            {/if}
-    
-            {* All monographs *}
-            {include file="frontend/components/monographList.tpl" monographs=$publishedSubmissions featured=$featuredMonographIds titleKey="catalog.category.heading"}
-    
-            {* Pagination *}
-            {if $prevPage > 1}
-                {capture assign=prevUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|to_array:$prevPage}{/capture}
-            {elseif $prevPage === 1}
-                {capture assign=prevUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()}{/capture}
-            {/if}
-            {if $nextPage}
-                {capture assign=nextUrl}{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|to_array:$nextPage}{/capture}
-            {/if}
-            {include
-                file="frontend/components/pagination.tpl"
-                prevUrl=$prevUrl
-                nextUrl=$nextUrl
-                showingStart=$showingStart
-                showingEnd=$showingEnd
-                total=$total
-            }
         {/if}
-
+    
+        
+        
 
         {* Pagination *}
         {if $prevPage > 1}
